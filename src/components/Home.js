@@ -39,6 +39,10 @@ const variants = {
   },
 };
 
+const MotionBox = ({ children }) => {
+  return <motion.div whileHover={{ y: -5, scale: 1.1 }}>{children}</motion.div>;
+};
+
 const Home = () => {
   const image = useColorModeValue(brushYImage, brushCImage);
 
@@ -54,6 +58,7 @@ const Home = () => {
       width="max-content"
       margin="auto"
       textAlign="left"
+      className="swing"
     >
       <SlideFade in>
         <VStack spacing={2} alignItems="flex-start">
@@ -70,30 +75,36 @@ const Home = () => {
               >
                 <VStack spacing={4} alignItems="flex-start">
                   <Stack spacing={2}>
-                    <Avatar
-                      boxShadow="xl"
-                      size={'xl'}
-                      src={
-                        'https://avatars2.githubusercontent.com/u/37842853?v=4'
-                      }
-                    />
-                    <Text fontSize="sm">Muhammad Ahmad</Text>
+                    <MotionBox>
+                      <Avatar
+                        boxShadow="xl"
+                        size={'xl'}
+                        src={
+                          'https://avatars2.githubusercontent.com/u/37842853?v=4'
+                        }
+                      />
+                      <Text fontSize="sm">Muhammad Ahmad</Text>
+                    </MotionBox>
                   </Stack>
-                  <Heading
-                    textAlign="left"
-                    top="10%"
-                    left="0"
-                    right="0"
-                    margin="0 auto"
-                    width="25rem"
-                    fontSize="3rem"
-                  >
-                    Full-Stack
-                    <br /> Developer based <br /> in Pakistan
-                  </Heading>
-                  <Text>
-                    Passionate about Tech. Lover of web and opensource.
-                  </Text>
+                  <MotionBox>
+                    <Heading
+                      textAlign="left"
+                      top="10%"
+                      left="0"
+                      right="0"
+                      margin="0 auto"
+                      width="25rem"
+                      fontSize="3rem"
+                    >
+                      Full-Stack
+                      <br /> Developer based <br /> in Pakistan
+                    </Heading>
+                  </MotionBox>
+                  <MotionBox>
+                    <Text>
+                      Passionate about Tech. Lover of web and opensource.
+                    </Text>
+                  </MotionBox>
                   <Divider />
                   <Flex alignItems="center" justify="center" w="100%">
                     <Box textAlign="center">
