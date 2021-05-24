@@ -1,7 +1,7 @@
 ## portfolio website
 
-![Home Screen1](/src/assets/images/screens/home_screen1.png)
-![Home Screen2](/src/assets/images/screens/home_screen2.png)
+![Home Screen1](/src/assets/images/home_screen1.png)
+![Home Screen2](/src/assets/images/home_screen2.png)
 
 ## Built with
 - [Reactjs](https://reactjs.org/)
